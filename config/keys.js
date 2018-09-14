@@ -1,3 +1,3 @@
 module.exports = {
-  mongoURI: 'mongodb://brad:brad@ds231725.mlab.com:31725/devconnector'
+  mongoURI: "mongodb://kamykov:dupa.8@ds257372.mlab.com:57372/reactdevconnector"
 };
