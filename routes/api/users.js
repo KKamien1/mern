@@ -2,10 +2,14 @@ const express = require("express");
 const router = express.Router();
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
+<<<<<<< HEAD
 const jwt = require("jsonwebtoken");
 const User = require("../../models/Users");
 const keys = require("../../config/keys").secret;
 const passport = require("passport");
+=======
+const User = require("../../models/Users");
+>>>>>>> f761cc920da1d16e7c6ca15b17f63ca44b958c33
 
 // @route   GET api/users/test
 // @desc    Tests users route
@@ -33,7 +37,10 @@ router.post("/register", (req, res) => {
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
+<<<<<<< HEAD
           newUser.password = hash;
+=======
+>>>>>>> f761cc920da1d16e7c6ca15b17f63ca44b958c33
           newUser
             .save()
             .then(user => res.json(user))
@@ -43,6 +50,7 @@ router.post("/register", (req, res) => {
     }
   });
 });
+<<<<<<< HEAD
 
 router.post("/login", (req, res) => {
   const email = req.body.email;
@@ -80,5 +88,7 @@ router.get(
     res.json({ msg: "Success", user: req.user });
   }
 );
+=======
+>>>>>>> f761cc920da1d16e7c6ca15b17f63ca44b958c33
 
 module.exports = router;
