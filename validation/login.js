@@ -19,6 +19,6 @@ module.exports = function validateLoginInput(data) {
 
   return {
     errors,
-    isValid: errors
+    isValid: isEmpty(errors)
   };
 };
