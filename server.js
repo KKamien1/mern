@@ -26,7 +26,7 @@ mongoose
 app.use(passport.initialize());
 require("./config/passport")(passport);
 
-app.get("/", (req, res) => res.send("Hello World"));
+//app.get("/", (req, res) => res.t("/client/public"));
 
 // Use Routes
 app.use("/api/users", users);
