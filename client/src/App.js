@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Link from "react-router-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
+
+import PrivateRoute from "./components/common/PrivateRoute";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -51,7 +53,9 @@ class App extends Component {
             <div className="container">
               <Route exect path="/register" component={Register} />
               <Route exect path="/login" component={Login} />
-              <Route exect path="/dashboard" component={Dashboard} />
+              <Switch>
+                <PrivateRoute exect path="/dashboard" component={Dashboard} />
+              </Switch>
             </div>
             <Footer />
           </div>
