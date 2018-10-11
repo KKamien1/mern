@@ -44,6 +44,7 @@ export class Login extends Component {
     this.props.loginUser(userData);
   }
   render() {
+    console.log(this.props);
     const { errors } = this.state;
     return (
       <div className="login">

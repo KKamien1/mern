@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Link from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
