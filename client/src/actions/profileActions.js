@@ -59,6 +59,19 @@ export const addExperience = (expData, history) => dispatch => {
     );
 };
 
+// Add education
+export const addEducation = (eduData, history) => dispatch => {
+  axios
+    .post("/api/profile/education", eduData)
+    .then(res => history.push("/dashboard"))
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
 //delete Account
 export const deleteAccount = () => dispatch => {
   if (window.confirm("Are you sure to delete account?")) {
