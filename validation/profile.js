@@ -31,9 +31,9 @@ module.exports = function validateProfileInput(data) {
       errors.youtube = "youtube field is invalid";
     }
   }
-  if (!isEmpty(data.tweeter)) {
-    if (!Validator.isURL(data.tweeter)) {
-      errors.tweeter = "tweeter field is invalid";
+  if (!isEmpty(data.twitter)) {
+    if (!Validator.isURL(data.twitter)) {
+      errors.twitter = "twitter field is invalid";
     }
   }
   if (!isEmpty(data.facebook)) {
@@ -46,9 +46,9 @@ module.exports = function validateProfileInput(data) {
       errors.instagram = "instagram field is invalid";
     }
   }
-  if (!isEmpty(data.linked)) {
-    if (!Validator.isURL(data.linked)) {
-      errors.linked = "linked field is invalid";
+  if (!isEmpty(data.linkedin)) {
+    if (!Validator.isURL(data.linkedin)) {
+      errors.linkedin = "linkedin field is invalid";
     }
   }
 
