@@ -55,7 +55,7 @@ router.get("/all", (req, res) => {
 });
 // @route GET api/profile/handle/:handle
 // @access Public
-router.get("/handle/:handle", (req, res) => {
+router.get("/:handle", (req, res) => {
   const errors = {};
   Profile.findOne({ handle: req.params.handle })
     .populate("user", ["name", "avatar"])
