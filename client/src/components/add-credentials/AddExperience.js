@@ -122,18 +122,18 @@ class AddExperience extends Component {
                   <label htmlFor="current" className="form-check-label">
                     Current Job
                   </label>
-                  <TextAreaFieldGroup
-                    name="description"
-                    value={this.state.description}
-                    onChange={this.onChange}
-                    error={errors.description}
-                  />
-                  <input
-                    type="submit"
-                    value="Submit"
-                    className="btn btn-info btn-block mt-4"
-                  />
                 </div>
+                <TextAreaFieldGroup
+                  name="description"
+                  value={this.state.description}
+                  onChange={this.onChange}
+                  error={errors.description}
+                />
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
+                />
               </form>
             </div>
           </div>
