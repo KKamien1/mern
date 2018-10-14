@@ -23,6 +23,7 @@ import Profile from "./components/profile/Profile";
 
 import "./App.css";
 import { clearCurrentProfile } from "./actions/profileActions";
+import NotFound from "./components/not-found/NotFound";
 
 // check for token
 
@@ -91,6 +92,7 @@ class App extends Component {
                   component={AddEducation}
                 />
               </Switch>
+              <Route exect path="/not-found" component={NotFound} />
             </div>
             <Footer />
           </div>
