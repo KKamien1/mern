@@ -207,7 +207,7 @@ class CreateProfile extends Component {
                 <SelectListGroup
                   placeholder="Status"
                   name="status"
-                  value={this.state.stauts}
+                  value={this.state.status}
                   onChange={this.onChange}
                   error={errors.status}
                   options={options}
